@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+// Dependencies
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+import firebaseConfig from './firebase.js';
 import './App.css';
+
+import Navbar from './components/Navbar';
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Navbar />
+        {/* <nav>
+          <ul>
+            <li><NavLink to="/AddJob">Add New Job</NavLink></li>
+            <li><NavLink to="/OpenApplications">Open Applications</NavLink></li>
+            <li><NavLink to="/Info">Info</NavLink></li>
+          </ul>
+        </nav> */}
       </header>
     </div>
+    </Router>
   );
 }
 
