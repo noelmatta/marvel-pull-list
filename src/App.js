@@ -1,11 +1,16 @@
 // Dependencies
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { BrowserRouter as Router
+ } from 'react-router-dom';
+// import { useState, useEffect } from 'react';
 
-import firebaseConfig from './firebase.js';
+// import firebaseConfig from './firebase.js';
 import './App.css';
 
 import Navbar from './components/Navbar';
+import Search from './components/Search';
+
+
+
 
 function App() {
   return (
@@ -21,6 +26,7 @@ function App() {
           </ul>
         </nav> */}
       </header>
+      <Search />
     </div>
     </Router>
   );
